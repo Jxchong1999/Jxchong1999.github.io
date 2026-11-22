@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jun-Xiong Chong</title>
-<meta name="description" content="Jun-Xiong Chong — face anti-spoofing, domain generalization and multi-modal learning. M.S. student, National Tsing Hua University.">
+<meta name="description" content="Jun-Xiong Chong — face anti-spoofing, domain generalization and multi-modal learning. AI Engineer at TSMC; M.S. in Computer Science, National Tsing Hua University.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -66,6 +66,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   border: 1px solid var(--rule); overflow: hidden;
 }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
+.cname { margin: 4px 0 0; color: var(--muted); font-size: 17px; letter-spacing: 0.08em; }
 h1 { font-family: var(--f-display); font-weight: 600; font-size: 32px; line-height: 1.15; margin: 0; text-wrap: balance; }
 .role { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
 .role strong { color: var(--ink); font-weight: 600; }
@@ -104,6 +105,8 @@ h3:first-of-type { margin-top: 0; }
 .edu-item .detail { grid-column: 1 / -1; color: var(--muted); font-size: 15px; }
 .gpa { font-family: var(--f-mono); font-size: 13px; color: var(--ink); background: var(--accent-soft); padding: 1px 7px; border-radius: 4px; }
 @media (max-width: 480px) { .edu-item { grid-template-columns: 1fr; } }
+.work { grid-column: 1 / -1; margin: 8px 0 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 6px; max-width: 70ch; }
+.work strong { font-weight: 600; }
 
 /* News */
 .news { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -144,23 +147,28 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
     <div class="avatar" aria-hidden="true">JX</div>
     <div>
       <h1>Jun-Xiong Chong</h1>
+      <p class="cname" lang="zh-Hant">張駿雄</p>
     </div>
     <p class="role">
-      <strong>M.S. student</strong>, Department of Computer Science<br>
-      National Tsing Hua University, Taiwan<br>
+      <strong>AI Engineer</strong>, TSMC, Taiwan<br>
+      <strong>M.S.</strong> in Computer Science<br>
+      National Tsing Hua University<br>
       Advisor: Prof. <a href="https://www.cs.nthu.edu.tw/" target="_blank" rel="noopener">Chiou-Ting Hsu</a>
     </p>
     <div class="contact">
-      <span id="email">jxchong@gapp.nthu.edu.tw</span>
+      <span id="email">jxchong99@gmail.com</span>
       <button class="copy" id="copy-email" type="button">Copy</button>
     </div>
     <ul class="links">
       <li><a href="https://scholar.google.com/citations?user=5vBXXWsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
       <li><a href="https://github.com/Jxchong1999" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
     </ul>
     <nav class="nav" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
     </nav>
@@ -169,15 +177,16 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
   <main>
     <section id="about" class="about">
       <h2>About</h2>
-      <p>I am a master's student in Computer Science at National Tsing Hua University, working with Prof. Chiou-Ting Hsu. My research studies how face anti-spoofing systems can stay reliable when the attacks, sensors and environments they meet at test time differ from those seen in training.</p>
+      <p>I am an AI Engineer at TSMC. I received my M.S. in Computer Science from National Tsing Hua University, where I worked with Prof. Chiou-Ting Hsu. My research studies how models can stay reliable on data that differs from what they were trained on, with face anti-spoofing as the main testbed: attacks, sensors and environments at test time rarely match those seen in training.</p>
       <p>My work spans domain-generalized feature learning, one-class learning from live faces only, and multi-modal learning across RGB, infrared and depth. It has appeared at CVPR, AAAI, BMVC, ICME and ICIP, and in Pattern Recognition, Information Sciences and Expert Systems with Applications. My interest in face security began with deepfake detection during my undergraduate studies at Multimedia University, Malaysia.</p>
-      <p>I am applying to PhD programs to continue research on trustworthy and generalizable computer vision.</p>
+      <p>At TSMC I build vision and vision-language systems for semiconductor engineering, from large-scale image mining of the research literature to VLM-based defect diagnosis. I am applying to PhD programs to work on current deep learning methods, including large language models, vision-language models and joint-embedding predictive architectures (JEPA), toward trustworthy and generalizable AI.</p>
       <ul class="interests" aria-label="Research interests">
-        <li>Face anti-spoofing</li>
+        <li>Self-supervised &amp; contrastive learning</li>
+        <li>Vision-language learning</li>
+        <li>Robustness to distribution shift</li>
         <li>Domain generalization</li>
-        <li>Out-of-distribution detection</li>
         <li>Multi-modal learning</li>
-        <li>Vision-language models</li>
+        <li>Face anti-spoofing</li>
       </ul>
     </section>
 
@@ -186,14 +195,51 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="edu">
         <div class="edu-item">
           <span class="degree">M.S. in Computer Science</span>
-          <span class="when">[2022] – present</span>
-          <span class="detail">National Tsing Hua University, Hsinchu, Taiwan · Advisor: Prof. Chiou-Ting Hsu · <span class="gpa">CGPA 3.86</span></span>
+          <span class="when">2022 – 2024</span>
+          <span class="detail">National Tsing Hua University, Hsinchu, Taiwan · Advisor: Prof. Chiou-Ting Hsu · <span class="gpa">GPA 3.91</span><br>Thesis: <em>Generalized Multimodal Face Anti-Spoofing via Multimodal Transition-Guided Feature Learning</em></span>
         </div>
         <div class="edu-item">
-          <span class="degree">[B.Sc. degree title]</span>
-          <span class="when">[20XX] – [2022]</span>
-          <span class="detail">Faculty of Information Science &amp; Technology, Multimedia University, Melaka, Malaysia</span>
+          <span class="degree">B.IT (Artificial Intelligence)</span>
+          <span class="when">2019 – 2022</span>
+          <span class="detail">Faculty of Information Science &amp; Technology, Multimedia University, Melaka, Malaysia<br>First research experience in face forensics; first-author deepfake detection paper (2022)</span>
         </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="edu">
+        <div class="edu-item">
+          <span class="degree">AI Engineer</span>
+          <span class="when">Nov 2024 – present</span>
+          <span class="detail">Taiwan Semiconductor Manufacturing Company (TSMC), Hsinchu, Taiwan</span>
+          <ul class="work">
+            <li><strong>Paper-image pipeline:</strong> extracted and classified more than 22.5 million images from 1.5 million research papers into TEM images, charts and tables.</li>
+            <li><strong>Linking TEM images to the literature:</strong> trench segmentation, an improved aspect-ratio measurement method, and contour-based search that retrieves papers with similar structures and defects.</li>
+            <li><strong>3D TCAD search:</strong> learned 3D process data from scratch in three weeks and built a search that finds manufacturing steps from the material being processed.</li>
+            <li><strong>VLM defect diagnosis:</strong> vision-language-model diagnosis of TEM defects, deployed in the team's chatbot.</li>
+          </ul>
+        </div>
+        <div class="edu-item">
+          <span class="degree">Graduate Researcher</span>
+          <span class="when">2022 – 2024</span>
+          <span class="detail">Department of Computer Science, National Tsing Hua University · Advisor: Prof. Chiou-Ting Hsu</span>
+          <ul class="work">
+            <li><strong>CTNet (first author):</strong> led the project on cross-modal feature transitions across RGB, infrared and depth for multi-modal face anti-spoofing.</li>
+            <li><strong>OC-SCMNet (CVPR 2024):</strong> proposed the memory bank, the largest single gain in the model, cutting cross-domain error from 21.36% to 7.29%.</li>
+            <li><strong>DFANet (ICME 2023):</strong> main implementation and experiments; maintain the public code.</li>
+            <li>Co-authored work on vision-language models, feature disentanglement, test-time adaptation and vision transformers.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills &amp; Languages</h2>
+      <div class="edu">
+        <div class="edu-item"><span class="degree">Programming</span><span class="detail">Python, PyTorch, TensorFlow</span></div>
+        <div class="edu-item"><span class="degree">Methods</span><span class="detail">Vision transformers, vision-language models, domain generalization, one-class learning, image retrieval</span></div>
+        <div class="edu-item"><span class="degree">Languages</span><span class="detail">English (TOEFL iBT 110/120 · TOEIC 970/990) · Chinese (native)</span></div>
       </div>
     </section>
 
@@ -204,6 +250,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
         <li><time>2026</time><span>Co-authored paper accepted by <em>Pattern Recognition</em>.</span></li>
         <li><time>2025/01</time><span>Co-authored paper accepted by <em>Information Sciences</em>.</span></li>
         <li><time>2024/12</time><span>SLIP accepted by <strong>AAAI 2025</strong>; survey accepted by <em>APSIPA Trans. on Signal and Information Processing</em>.</span></li>
+        <li><time>2024/11</time><span>Joined <strong>TSMC</strong> as an AI Engineer.</span></li>
         <li><time>2024/02</time><span>OC-SCMNet accepted by <strong>CVPR 2024</strong>.</span></li>
         <li><time>2023/08</time><span>Test-time adaptation paper accepted by <strong>BMVC 2023</strong>.</span></li>
         <li><time>2023/07</time><span>LDCformer accepted by <strong>ICIP 2023</strong>.</span></li>
@@ -362,7 +409,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
       </ol>
     </section>
 
-    <footer>Last updated October 2026.</footer>
+    <footer>Last updated November 2026.</footer>
   </main>
 </div>
 
